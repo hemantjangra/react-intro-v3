@@ -20,7 +20,7 @@ class Carousel extends Component {
     return (
       <div className="flex flex-row justify-around h-72 mx-52">
         <img src={this.props.images[this.state.active]} alt="animal" />
-        <div className="w-36 h-36 m-auto">
+        <div className="w-36 h-36 m-auto flex flex-row justify-around">
           {this.props.images.map((photo, index) => (
             // eslint-disable-next-line
             <img
