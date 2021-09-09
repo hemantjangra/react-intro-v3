@@ -4,7 +4,7 @@ import { Pet } from "./Pet";
 
 export const Results = ({ pets }) => {
   return (
-    <div className="w-8/12 bg-red-400 mr-20">
+    <div className="grid gap-4 lg:grid-cols-2 sm:grid-cols-1 mr-20">
       {!pets.length ? (
         <h1>Pets not found</h1>
       ) : (

@@ -63,7 +63,7 @@ export const SearchParam = () => {
           </label>
           <label htmlFor="animals" className="w-full my-2.5">
             <select
-              className="w-full h-8"
+              className="full-width"
               id="animal"
               onChange={(e) => updateAnimals(e.target.value)}
               onBlur={(e) => updateAnimals(e.target.value)}
@@ -81,7 +81,7 @@ export const SearchParam = () => {
           </label>
           <label htmlFor="breed" className="w-full my-2.5">
             <select
-              className="w-full h-8"
+              className="w-full"
               id="breed"
               disabled={!breedList.length}
               onChange={(e) => updateBreed(e.target.value)}
@@ -96,7 +96,7 @@ export const SearchParam = () => {
           </label>
           <label htmlFor="theme" className="w-full my-2.5">
             <select
-              className="w-full h-8"
+              className="w-full"
               value={theme}
               onChange={(e) => setTheme(e.target.value)}
               onBlur={(e) => setTheme(e.target.value)}

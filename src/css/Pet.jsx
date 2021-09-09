@@ -17,12 +17,12 @@ export const Pet = ({ name, animal, breed, images, location, id }) => {
   return (
     <Link
       to={`/css/details/${id}`}
-      className="flex flex-row py-5 my-2.5 mx-10 border-b-2 border-white"
+      className="bg-red-400 relative block mx-10 p-5"
     >
-      <div className="h-36 w-36 ">
+      <div className="h-full w-full m-auto">
         <img src={hero} alt={name} className="rounded-full" />
       </div>
-      <div className="info">
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-tr from-white to-transparent pr-2 pt-2">
         <h1>{name}</h1>
         <h2>{`${animal} — ${breed} — ${location}`}</h2>
       </div>
