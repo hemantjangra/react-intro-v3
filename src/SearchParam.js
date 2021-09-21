@@ -8,7 +8,7 @@ import { Results } from "./Results";
 
 import { ThemeContext } from "./ThemeContext";
 
-export const SearchParam = () => {
+const SearchParam = () => {
   //const location = "London, United Kingdom";
   const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
 
@@ -120,3 +120,5 @@ export const SearchParam = () => {
     </Fragment>
   );
 };
+
+export default SearchParam;

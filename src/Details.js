@@ -13,11 +13,13 @@ class Details extends Component {
     this.state = { loading: true, showModal: false };
   }
 
-  toggleModal = () => {
+  toggleModal() {
     this.setState({ showModal: !this.state.showModal });
-  };
+  }
 
-  adopt = () => (window.location = "http://bit.ly/pet-adopt");
+  adopt() {
+    window.location = "http://bit.ly/pet-adopt";
+  }
 
   async componentDidMount() {
     const { id } = this.props;
@@ -34,13 +36,17 @@ class Details extends Component {
       <Fragment>
         <Header />
         <Carousel images={images} />
-        <div className="bg-red-400 m-auto mt-10 rounded-3xl" style={{width:'50%'}}>
+        <div
+          className="bg-red-400 m-auto mt-10 rounded-3xl"
+          style={{ width: "50%" }}
+        >
           <div className="m-20 p-4">
             <h1>{name}</h1>
             <h2>{`${animal} - ${breed} - ${city}, ${state}`}</h2>
             <ThemeContext.Consumer>
               {([theme]) => (
-                <button className="w-auto m-auto rounded-2xl block p-4"
+                <button
+                  className="w-auto m-auto rounded-2xl block p-4"
                   onClick={() => this.toggleModal()}
                   style={{ backgroundColor: theme }}
                 >

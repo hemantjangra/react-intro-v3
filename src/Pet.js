@@ -15,10 +15,7 @@ export const Pet = ({ name, animal, breed, images, location, id }) => {
     hero = images[0];
   }
   return (
-    <Link
-      to={`/css/details/${id}`}
-      className="bg-red-400 relative block mx-10 p-5"
-    >
+    <Link to={`/details/${id}`} className="bg-red-400 relative block mx-10 p-5">
       <div className="h-full w-full m-auto">
         <img src={hero} alt={name} className="rounded-full" />
       </div>
