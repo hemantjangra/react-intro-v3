@@ -1,13 +1,13 @@
 // /*global React ReactDOM */
 import React, { StrictMode, useState } from "react";
 import { Route, Switch } from "react-router-dom";
-import loadable from "@loadable/component";
 import { ThemeContext } from "./ThemeContext";
 
-const SearchParam = loadable(() => import("./SearchParam"), { ssr: true });
-// import { LazySearchParam } from './lazy';
-const DetailsErrorBoundary = loadable(() => import("./Details"), { ssr: true });
+//const SearchParam = loadable(() => import("./SearchParam"), { ssr: true });
+import SearchParam from './SearchParam';
+//const DetailsErrorBoundary = loadable(() => import("./Details"), { ssr: true });
 // import { LazyDetails } from "./lazy";
+import DetailsErrorBoundary from "./Details";
 
 const App = () => {
   const theme = useState("darkBlue");
@@ -16,14 +16,12 @@ const App = () => {
       <ThemeContext.Provider value={theme}>
         <Switch>
           <Route exact path="/">
-            <SearchParam fallback={<div>loading...</div>} />
+            <SearchParam />
           </Route>
           <Route
             path="/details/:id"
             render={({ match }) => (
-              <DetailsErrorBoundary
-                id={match.params.id}
-                fallback={<div>...</div>}
+              <DetailsErrorBoundary id={match.params.id}
               />
             )}
           />
